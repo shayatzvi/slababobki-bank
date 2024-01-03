@@ -1,7 +1,8 @@
 
 <title>Login</title>
-
-
+<link rel="stylesheet" href="style.css">
+<body>
+  <center>
 <form id="login-form">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
@@ -10,8 +11,8 @@
     <input type="password" id="password" name="password" required>
   
     <button type="submit">Login</button>
-  </form>
-  
+  </form> </center> 
+</body>
   <script>
     const loginForm = document.getElementById("login-form");
     loginForm.addEventListener("submit", (event) => {
