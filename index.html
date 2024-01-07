@@ -1,4 +1,4 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <button class="login-trigger">Open Login Popup</button>
+<body><meta name="viewport" content="width=device-width, initial-scale=1.0"> <button class="login-trigger">Open Login Popup</button>
 
 <div class="login-popup" style="display: none;"> <form id="login-form">
   </form>
@@ -93,3 +93,20 @@ else {
 
     });
   </script>
+  <button class="login-trigger">Open Login Popup</button>
+
+<div class="login-popup" style="display: none;"> <form id="login-form">
+  </form>
+</div>
+
+<script>
+  const triggerButton = document.querySelector(".login-trigger");
+  const loginPopup = document.querySelector(".login-popup");
+
+  triggerButton.addEventListener("click", () => {
+    loginPopup.style.display = loginPopup.style.display === "none" ? "block" : "none"; // Toggle visibility
+  });
+</script>
+
+</body>
+
