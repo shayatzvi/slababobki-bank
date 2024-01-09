@@ -1,3 +1,15 @@
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div>
+
+<link rel="stylesheet" href="style.css">
+</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +67,21 @@
         th {
             background-color: #f2f2f2;
         }
+
+        /* Button styles */
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
     </style>
 </head>
 <body>
@@ -65,7 +92,12 @@
     <main>
         <section>
             <h2>Welcome, Levi!</h2>
-            <p class="balance">Account Balance: $180</p>
+            <p class="balance">Account Balance: $180.00</p>
+
+            <!-- Buttons for "Transfer" and "Insert Check" -->
+            <button onclick="location.href='levitransfer.html'">Transfer</button>
+            <button onclick="location.href='insertcheck.html'">Insert Check</button>
+            Slababobki CVV: 206
         </section>
 
         <section>
@@ -79,10 +111,14 @@
                     </tr>
                 </thead>
                 <tbody>
+               
+                    
+                   
+
                     <tr>
-                        <td>2024-01-09</td>
-                        <td>Large transfer recieved from Gavriel</td>
-                        <td>+$80.00</td>
+                        <td>2024-1-7</td>
+                        <td>Transfer from Gavriel</td>
+                        <td>+$80</td>
                     </tr>
                     <!-- Add more rows as needed -->
                 </tbody>
@@ -90,4 +126,104 @@
         </section>
     </main>
 </body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 998;
+    }
+    .close-btn {
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+  <span class="close-btn" onclick="closePopup()">X</span>
+  <p>Hi</p>
+</div>
+
+<script>
+  // Function to open the popup
+  function openPopup() {
+    document.getElementById('popup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+  }
+
+  // Function to close the popup
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+  }
+
+  // Automatically open the popup when the page loads
+  window.onload = openPopup;
+</script>
+
+
+
+ <!-- Loan application form section -->
+ <section style="background-color: #f9f9f9; padding: 20px;">
+    <div class="container">
+        <h2 style="text-align: center; color: #333;">Loan Application Form</h2>
+        <form name="leviloan" method="POST" data-netlify="true">
+            <label for="name" style="font-weight: bold;">Full Name:</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
+
+            <label for="email" style="font-weight: bold;">Email:</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
+
+            <label for="amount" style="font-weight: bold;">Loan Amount:</label>
+            <input type="number" id="amount" name="amount" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
+
+            <label for="term" style="font-weight: bold;">Loan Term (months):</label>
+            <input type="number" id="term" name="term" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
+
+            <label for="purpose" style="font-weight: bold;">Loan Purpose:</label>
+            <select id="purpose" name="purpose" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
+                <option value="">Select Purpose</option>
+                <option value="home">Home Improvement</option>
+                <option value="auto">Auto Purchase</option>
+                <option value="education">Education</option>
+                <option value="other">Other</option>
+            </select>
+
+            <button type="submit" style="background-color: #4caf50; color: white; padding: 15px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 18px;">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
+</body>
+</html>
+</html></body>
 </html>
