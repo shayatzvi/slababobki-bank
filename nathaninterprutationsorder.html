@@ -33,40 +33,43 @@
 </body>
 </html
 
-  
-    </style>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
 </head>
 <body>
-Use Kishkes Pay <img src="tap-to-pay-logo.png" alt="Tap to Pay Logo" height="20">
-        </button>
-    <form name="nathans shop" method="POST" data-netlify="true">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="Account Name">Account Name:</label>
-        <input type="text" id="Account Name" name="Account Name" required>
+    <form style="max-width: 600px; margin: 0 auto;">
+        <h2>Order Form</h2>
 
-        <label for="product">Select Product:</label>
-        <select id="product" name="product" required>
-            <option value="Reg Interprutation">Regular Interprutation</option>
-           
-        </select>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br>
 
-        <label for="Select delivery method">Select Delivery Method:</label>
-        <select id="product" name="product" required>
-            <option value="At school">At school</option>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br>
+
+        <label for="accountName">Account Name:</label>
+        <input type="text" id="accountName" name="accountName" required><br>
+
+        <label for="slababobkiCVV">Slababobki CVV:</label>
+        <input type="text" id="slababobkiCVV" name="slababobkiCVV" required><br>
+
+        <label for="deliveryMethod">Delivery Method:</label>
+        <select id="deliveryMethod" name="deliveryMethod">
             <option value="email">Email</option>
-        </select>
+            <option value="dropOff">Drop off at school</option>
+        </select><br>
 
+        <input type="submit" value="Submit Order"><br>
 
-        <label for="CVV"> slababobki CVV:</label>
-        <input type="number" id="CVV" name="CVV" min="3" required>
-
-        <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" min="1" required>
-
-        <button type="submit">Submit Order</button>
+        <button style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">
+            Use Kishkes Pay <img src="tap-to-pay-logo.png" alt="Tap to Pay Logo" height="20">
+        </button>
     </form>
 
 </body>
+</html></body>
 </html>
