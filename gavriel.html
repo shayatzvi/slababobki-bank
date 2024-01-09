@@ -111,6 +111,11 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td>2024-01-09</td>
+                        <td>Large transfer to levi (kishkes) for "rent"</td>
+                        <td>-$80.00</td>
+                    </tr>
+                    <tr>
                         <td>2024-01-01</td>
                         <td>Online Purchase</td>
                         <td>-$50.00</td>
@@ -157,6 +162,32 @@
     </div>
     </main>
 </body>
+  
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+  <span class="close-btn" onclick="closePopup()">X</span>
+  <p>Alert! There was a recent transfer of 80 bup from you to levi. </p>
+</div>
+
+<script>
+  // Function to open the popup
+  function openPopup() {
+    document.getElementById('popup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+  }
+
+  // Function to close the popup
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+  }
+
+  // Automatically open the popup when the page loads
+  window.onload = openPopup;
+</script>
 </html></body>
 </html>
 
