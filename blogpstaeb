@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post with Audio</title>
+</head>
+<body>
+
+<header>
+    <h1>My Blog</h1>
+</header>
+
+<main>
+    <article>
+        <h2>Blog Post Title</h2>
+        <p>Published on January 13, 2024</p>
+
+        <p>This is the content of your blog post. Write something interesting here...</p>
+
+        <audio controls>
+            <source src="your-audio-file.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2024 My Blog. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
