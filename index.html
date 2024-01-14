@@ -1,0 +1,84 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="icon" type="image/x-icon" href="https://www.canva.com/design/DAF5PzGj0bM/unkDxztwUDXTRQvmvZJdpA/view?utm_content=DAF5PzGj0bM&utm_campaign=designshare&utm_medium=link&utm_source=editor">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+<body>
+  <div>
+<form id="login-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+  
+    <button type="submit">Login</button>
+  </form> </div>
+</body>
+  <script>
+    const loginForm = document.getElementById("login-form");
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault(); // Prevent default form submission
+  
+      // Get user credentials
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+  
+      // Validate credentials (example with hardcoded values)
+      if (username === "mordechai" && password === "user1234") {
+        window.location.href = "mordechai.html"; // Redirect to admin page
+      } else if (username === "chezy" && password === "user123") {
+        window.location.href = "chezy.html"; // Redirect to user page
+      } else  if (username === "nathan" && password === "user1234") {
+        window.location.href = "nathan.html"; // Redirect to user page
+      } else {
+        
+      } // ... existing code
+ if (username === "noach" && password === "user1234") {
+  window.location.href = "noach.html"; // Redirect to user3 page
+} else if (username === "Yehonatan" && password === "user1234") {
+  window.location.href = "yehonatan.html"; // Redirect to user4 page
+} // Repeat this pattern for 8 more users, replacing placeholders with actual usernames and passwords
+else {
+  
+
+
+}
+
+
+
+// ... existing code
+ if (username === "shaya" && password === "shebo") {
+  window.location.href = "shaya.html"; // Redirect to user3 page
+} else if (username === "mendelg" && password === "mendel123") {
+  window.location.href = "mendelg.html"; // Redirect to user4 page
+} // Repeat this pattern for 8 more users, replacing placeholders with actual usernames and passwords
+else {
+ 
+}
+
+
+// ... existing code
+ if (username === "gavriel" && password === "user1234") {
+  window.location.href = "gavriel.html"; // Redirect to user3 page
+} else if (username === "zalman" && password === "user1234") {
+  window.location.href = "zalman.html"; // Redirect to user4 page
+} // Repeat this pattern for 8 more users, replacing placeholders with actual usernames and passwords
+else {
+  
+}
+
+// ... existing code
+ if (username === "ariel" && password === "user1234") {
+  window.location.href = "ariel.html"; // Redirect to user3 page
+} else if (username === "mra" && password === "user1234") {
+  window.location.href = "mra.html"; // Redirect to user4 page
+} // Repeat this pattern for 8 more users, replacing placeholders with actual usernames and passwords
+else {
+ 
+}
+
+
+    });
+  </script>
+
+  <h1>SHOPS ARE OPEN!</h1>
+  <a href="nathaninterprutation.html">Nathans Interprutation</a>
