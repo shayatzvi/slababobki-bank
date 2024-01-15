@@ -81,64 +81,6 @@ else {
   </script>
 
 
- <style>
-        /* Style for the overlay */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Style for the popup */
-        .popup {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-
-        /* Style for the close button */
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-<!-- Trigger button -->
-<button onclick="openPopup()">Open Popup</button>
-
-<!-- The overlay and popup container -->
-<div class="overlay" id="overlay">
-    <div class="popup">
-        <!-- Close button -->
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <!-- Image content -->
-        <img src="issuealert.png" alt="Popup Image">
-    </div>
-</div>
-
-<script>
-    // Function to open the popup
-    function openPopup() {
-        document.getElementById('overlay').style.display = 'flex';
-    }
-
-    // Function to close the popup
-    function closePopup() {
-        document.getElementById('overlay').style.display = 'none';
-    }
-</script>
 </body>
 </html>
 
