@@ -149,6 +149,11 @@ window.onload = function() {
 <div id="myPopup" class="popup">
   <span class="close">&times;</span>
   <img class="popup-content" src="issuealert.png" alt="Image description">
+  document.getElementById("myPopup").addEventListener("click", function(event) {
+  if (event.target.classList.contains("close")) {
+    this.style.display = "none";
+  }
+});
 </div>
 
 </body>
