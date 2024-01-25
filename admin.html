@@ -1,272 +1,54 @@
-  <link rel="icon" type="image/x-icon" href="https://www.canva.com/design/DAF5PzGj0bM/unkDxztwUDXTRQvmvZJdpA/view?utm_content=DAF5PzGj0bM&utm_campaign=designshare&utm_medium=link&utm_source=editor">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div>
-
-<link rel="stylesheet" href="style.css">
-</div>
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Dashboard</title>
+    <title>Bank Account Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            margin: 20px;
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
-
-        main {
+        .dashboard {
+            border: 1px solid #ccc;
             padding: 20px;
+            max-width: 400px;
+            margin: auto;
         }
 
-        section {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
+        .account-info {
+            margin-bottom: 15px;
         }
 
-        h2 {
-            color: #333;
-        }
-
-        .balance {
-            font-size: 24px;
-            color: #27ae60;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        /* Button styles */
-        button {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        button:hover {
-            background-color: #2980b9;
+        .transaction-history {
+            max-height: 200px;
+            overflow-y: auto;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Account Dashboard</h1>
-    </header>
 
-    <main>
-        <section>
-            <h2>Welcome, Admin!</h2>
-            <p class="balance">Account Balance: $100.00</p>
+    <div class="dashboard">
+        <h2>Bank Account Dashboard</h2>
 
-            <!-- Buttons for "Transfer" and "Insert Check" -->
-            <button onclick="location.href='transfer.html'">Transfer</button>
-            <button onclick="location.href='insertcheck.html'">Insert Check</button>
-        </section>
+        <div class="account-info">
+            <p><strong>Account Holder:</strong> John Doe</p>
+            <p><strong>Account Number:</strong> XXXX-XXXX-XXXX-1234</p>
+            <p><strong>Balance:</strong> $1,000.00</p>
+        </div>
 
-        <section>
-            <h2>Recent Transactions</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Description</th>
-                        <th>Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2024-01-01</td>
-                        <td>Online Purchase</td>
-                        <td>-$50.00</td>
-                    </tr>
-                   <tr>
-<td>Unknown</td>
+        <h3>Transaction History</h3>
+        <div class="transaction-history">
+            <ul>
+                <li>Deposit: +$500.00</li>
+                <li>Withdrawal: -$200.00</li>
+                <li>Payment: -$50.00</li>
+                <!-- Add more transaction entries as needed -->
+            </ul>
+        </div>
 
-                   </tr> 
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-        </section>
-    </main>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      z-index: 999;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 998;
-    }
-    .close-btn {
-      cursor: pointer;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-  </style>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      z-index: 999;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 998;
-    }
-    .close-btn {
-      cursor: pointer;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-  </style>
-</head>
-<body>
-
-<div class="overlay" id="overlay"></div>
-
-<div class="popup" id="popup">
-  <span class="close-btn" onclick="closePopup()">X</span>
-  <p>Your popup text goes here.</p>
-</div>
-
-<script>
-  // Function to open the popup
-  function openPopup() {
-    document.getElementById('popup').style.display = 'block';
-    document.getElementById('overlay').style.display = 'block';
-  }
-
-  // Function to close the popup
-  function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
-  }
-
-  // Automatically open the popup when the page loads
-  window.onload = openPopup;
-</script>
-
-
-
-
-<!-- Loan application form section -->
-<section style="background-color: #f9f9f9; padding: 20px;">
-  <div class="container">
-      <h2 style="text-align: center; color: #333;">Loan Application Form</h2>
-      <form action="#" method="post" id="loanForm">
-          <label for="name" style="font-weight: bold;">Full Name:</label>
-          <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
-
-          <label for="email" style="font-weight: bold;">Email:</label>
-          <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
-
-          <label for="amount" style="font-weight: bold;">Loan Amount:</label>
-          <input type="number" id="amount" name="amount" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
-
-          <label for="term" style="font-weight: bold;">Loan Term (months):</label>
-          <input type="number" id="term" name="term" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
-
-          <label for="purpose" style="font-weight: bold;">Loan Purpose:</label>
-          <select id="purpose" name="purpose" required style="width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-top: 6px; margin-bottom: 12px; font-size: 16px;">
-              <option value="">Select Purpose</option>
-              <option value="home">Home Improvement</option>
-              <option value="auto">Auto Purchase</option>
-              <option value="education">Education</option>
-              <option value="other">Other</option>
-          </select>
-
-          <button type="submit" style="background-color: #4caf50; color: white; padding: 15px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 18px;">Submit Application</button>
-      </form>
-  </div>
-</section>
-
-<!-- ... (rest of the HTML) -->
-
+    </div>
 
 </body>
-</html></body>
 </html>
-</body>
-</html></body>
-</html>
-
