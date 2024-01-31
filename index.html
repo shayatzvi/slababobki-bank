@@ -3,16 +3,33 @@
 <link rel="stylesheet" href="style.css">
 <body>
   <div>
-<form id="login-form">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <body>
+      <div class="login-container">
+          <div class="header">
+              <img src="google_logo.png" alt="Google Logo" class="google-logo">
+              <h2>Sign in</h2>
+          </div>
+          <form id="login-form">
+              <div class="input-container">
+                  <label for="username">Email or phone</label>
+                  <input type="text" id="username" name="username" required>
+              </div>
   
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+              <div class="input-container">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" required>
+              </div>
   
-    <button type="submit">Login</button>
-  </form> </div>
-</body>
+              <div class="forgot-password">
+                  <a href="#">Forgot password?</a>
+              </div>
+  
+              <button type="submit">Next</button>
+          </form>
+          <div class="signup">
+              <p>Not your computer? Use Guest mode to sign in privately.</p>
+              <a href="#">Learn more</a>
+          </div>
   <script>
     const loginForm = document.getElementById("login-form");
     loginForm.addEventListener("submit", (event) => {
@@ -73,6 +90,18 @@ else {
   window.location.href = "mra.html"; // Redirect to user4 page
 } // Repeat this pattern for 8 more users, replacing placeholders with actual usernames and passwords
 else {
+  
+ 
+}
+
+// ... existing code
+if (username === "levi" && password === "user1234") {
+  window.location.href = "levi.html"; // Redirect to user3 page
+} else if (username === "sa" && password === "user1234") {
+  window.location.href = "as"; // Redirect to user4 page
+} // Repeat this pattern for 8 more users, replacing placeholders with actual usernames and passwords
+else {
+  
  
 }
 
