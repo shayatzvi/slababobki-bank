@@ -1,1 +1,212 @@
-is anyone on?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleek Bank Account Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    main {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    sidebar {
+      width: 200px;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    content {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section {
+      display: none;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    form input, form button, form label {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      cursor: pointer;
+      background-color: #333;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Bank Account Dashboard</h1>
+  </header>
+
+  <main>
+    <sidebar>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showBalance()">Balance</a></li>
+          <li><a href="#" onclick="showTransactions()">Transactions</a></li>
+          <li><a href="#" onclick="showTransfers()">Transfers</a></li>
+          <li><a href="#" onclick="showLoans()">Loans</a></li>
+          <li><a href="#" onclick="showAddCheck()">Add a Check</a></li>
+        </ul>
+      </nav>
+    </sidebar>
+
+    <content>
+      <div id="balanceSection">
+        <h2>Account Summary for Shmuel</h2>
+        <p><strong>Account Number:</strong> 1021-78-5018-89</p>
+        <p><strong>Account Type:</strong> Savings</p>
+        <p><strong>Current Balance:</strong> $1,000.00</p>
+      </div>
+
+      <div id="transactionsSection">
+        <h2>Recent Transactions</h2>
+        <table id="transactionsTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Transaction rows will be dynamically added here using JavaScript -->
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="transfersSection" class="form-section">
+        <h2>Transfer Funds</h2>
+        <form name="transfer-formshmuel" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-success="/success">
+          <input type="text" id="transferRecipient" name="transferRecipient" placeholder="Recipient">
+          <input type="number" id="transferAmount" name="transferAmount" placeholder="Amount">
+          <button type="submit">Transfer</button>
+        </form>
+      </div>
+
+      <div id="loansSection" class="form-section">
+        <h2>Request Loan</h2>
+        <form name="loan-formshmuel" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-success="/success">
+          <input type="number" id="loanAmount" name="loanAmount" placeholder="Loan Amount">
+          <button type="submit">Request Loan</button>
+        </form>
+      </div>
+
+      <div id="addCheckSection" class="form-section">
+        <h2>Add a Check</h2>
+        <form name="shmuelcheck" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-success="/success" enctype="multipart/form-data">
+          <label for="checkRecipient">Recipient:</label>
+          <input type="text" id="checkRecipient" name="checkRecipient" placeholder="Recipient">
+
+          <label for="checkAmount">Amount:</label>
+          <input type="number" id="checkAmount" name="checkAmount" placeholder="Amount">
+
+          <label for="checkPhoto">Upload Photo:</label>
+          <input type="file" id="checkPhoto" name="checkPhoto">
+
+          <button type="submit">Add Check</button>
+        </form>
+      </div>
+    </content>
+  </main>
+
+  <script>
+    function showBalance() {
+      showSection('balanceSection');
+    }
+
+    function showTransactions() {
+      showSection('transactionsSection');
+    }
+
+    function showTransfers() {
+      showSection('transfersSection');
+    }
+
+    function showLoans() {
+      showSection('loansSection');
+    }
+
+    function showAddCheck() {
+      showSection('addCheckSection');
+    }
+
+    function showSection(sectionId) {
+      const sections = ['balanceSection', 'transactionsSection', 'transfersSection', 'loansSection', 'addCheckSection'];
+      sections.forEach(section => {
+        const element = document.getElementById(section);
+        if (section === sectionId) {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
