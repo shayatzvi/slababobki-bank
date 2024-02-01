@@ -112,6 +112,50 @@ else {
   </script>
 
 
+
+   <style>
+        /* Styles for the popup container */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        /* Style for the close button */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="openPopup()">
+
+<!-- Popup container with close button and text -->
+<div id="popup" class="popup-container">
+    <span class="close-button" onclick="closePopup()">&times;</span>
+    <p>Their may be some issues since the system is in developmental stages. Please beware!</p>
+</div>
+
+<!-- JavaScript to handle popup functionality -->
+<script>
+    function openPopup() {
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
 </body>
 </html>
 
