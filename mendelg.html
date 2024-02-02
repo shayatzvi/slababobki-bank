@@ -1,212 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sleek Bank Account Dashboard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-
-    main {
-      display: flex;
-      max-width: 1200px;
-      margin: 20px auto;
-    }
-
-    sidebar {
-      width: 200px;
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav li {
-      margin-bottom: 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffcc00;
-    }
-
-    content {
-      flex-grow: 1;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-section {
-      display: none;
-    }
-
-    h2 {
-      margin-bottom: 10px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 300px;
-      margin: auto;
-    }
-
-    form input, form button, form label {
-      margin: 10px 0;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-
-    button {
-      cursor: pointer;
-      background-color: #333;
-      color: #fff;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background-color: #ffcc00;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Bank Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  <header>
-    <h1> Bank Account Dashboard</h1>
-  </header>
+    <header class="bg-primary text-white text-center py-4">
+        <h1 class="h3">Realistic Bank Dashboard</h1>
+    </header>
 
-  <main>
-    <sidebar>
-      <nav>
-        <ul>
-          <li><a href="#" onclick="showBalance()">Balance</a></li>
-          <li><a href="#" onclick="showTransactions()">Transactions</a></li>
-          <li><a href="#" onclick="showTransfers()">Transfers</a></li>
-          <li><a href="#" onclick="showLoans()">Loans</a></li>
-          <li><a href="#" onclick="showAddCheck()">Add a Check</a></li>
-        </ul>
-      </nav>
-    </sidebar>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="h5">Account Details</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-1"><strong>Account Holder:</strong> John Smith</p>
+                        <p class="mb-1"><strong>Account Number:</strong> 123456789</p>
+                    </div>
+                </div>
 
-    <content>
-      <div id="balanceSection">
-        <h2>Account Summary for Mendel Gs</h2>
-        <p><strong>Account Number:</strong> XXXX-XXXX-XXXX-1234</p>
-        <p><strong>Account Type:</strong> Savings</p>
-        <p><strong>Current Balance:</strong> $100.00</p>
-      </div>
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h2 class="h5">Current Balance</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-success">$12,500.00</h3>
+                    </div>
+                </div>
+            </div>
 
-      <div id="transactionsSection">
-        <h2>Recent Transactions</h2>
-        <table id="transactionsTable">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Description</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Transaction rows will be dynamically added here using JavaScript -->
-          </tbody>
-        </table>
-      </div>
-      
-      <div id="transfersSection" class="form-section">
-        <h2>Transfer Funds</h2>
-        <form name="transfer-mendelg" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-success="/success">
-          <input type="text" id="transferRecipient" name="transferRecipient" placeholder="Recipient">
-          <input type="number" id="transferAmount" name="transferAmount" placeholder="Amount">
-          <button type="submit">Transfer</button>
-        </form>
-      </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="h5">Transaction History</h2>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024-02-01</td>
+                                    <td>Deposit</td>
+                                    <td>$3,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-02-05</td>
+                                    <td>Online Purchase</td>
+                                    <td>-$800.00</td>
+                                </tr>
+                                <!-- Add more rows for transaction history -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-      <div id="loansSection" class="form-section">
-        <h2>Request Loan</h2>
-        <form name="loan-mendelg" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-success="/success">
-          <input type="number" id="loanAmount" name="loanAmount" placeholder="Loan Amount">
-          <button type="submit">Request Loan</button>
-        </form>
-      </div>
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h2 class="h5">Actions</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="loanForm" name="loan-mendelg
 
-      <div id="addCheckSection" class="form-section">
-        <h2>Add a Check</h2>
-        <form name="mednelgcheck" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-success="/success" enctype="multipart/form-data">
-          <label for="checkRecipient">Recipient:</label>
-          <input type="text" id="checkRecipient" name="checkRecipient" placeholder="Recipient">
+" data-netlify="true">
+                            <div class="form-group">
+                                <label for="loanAmount">Loan Amount</label>
+                                <input type="number" class="form-control" id="loanAmount" name="loanAmount" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Apply for Loan</button>
+                        </form>
 
-          <label for="checkAmount">Amount:</label>
-          <input type="number" id="checkAmount" name="checkAmount" placeholder="Amount">
+                        <form id="transferForm" name="transfer-mendelg" class="mt-3" data-netlify="true">
+                            <div class="form-group">
+                                <label for="recipientAccount">Recipient Account Number</label>
+                                <input type="number" class="form-control" id="recipientAccount" name="recipientAccount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="transferAmount">Transfer Amount</label>
+                                <input type="number" class="form-control" id="transferAmount" name="transferAmount" required>
+                            </div>
+                            <button type="submit" class="btn btn-success">Transfer Money</button>
+                        </form>
 
-          <label for="checkPhoto">Upload Photo:</label>
-          <input type="file" id="checkPhoto" name="checkPhoto">
+                        <form id="checkDepositForm" name="mednelgcheck" class="mt-3" data-netlify="true">
+                            <div class="form-group">
+                                <label for="checkAmount">Check Amount</label>
+                                <input type="number" class="form-control" id="checkAmount" name="checkAmount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkPayer">Check Payer</label>
+                                <input type="text" class="form-control" id="checkPayer" name="checkPayer" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkPhoto">Upload Check Photo</label>
+                                <input type="file" class="form-control-file" id="checkPhoto" name="checkPhoto" accept="image/*" required>
+                            </div>
+                            <button type="submit" class="btn btn-warning">Deposit Check</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-          <button type="submit">Add Check</button>
-        </form>
-      </div>
-    </content>
-  </main>
-
-  <script>
-    function showBalance() {
-      showSection('balanceSection');
-    }
-
-    function showTransactions() {
-      showSection('transactionsSection');
-    }
-
-    function showTransfers() {
-      showSection('transfersSection');
-    }
-
-    function showLoans() {
-      showSection('loansSection');
-    }
-
-    function showAddCheck() {
-      showSection('addCheckSection');
-    }
-
-    function showSection(sectionId) {
-      const sections = ['balanceSection', 'transactionsSection', 'transfersSection', 'loansSection', 'addCheckSection'];
-      sections.forEach(section => {
-        const element = document.getElementById(section);
-        if (section === sectionId) {
-          element.style.display = 'block';
-        } else {
-          element.style.display = 'none';
-        }
-      });
-    }
-  </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
